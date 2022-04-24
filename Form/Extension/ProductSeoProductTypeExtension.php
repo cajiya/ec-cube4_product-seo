@@ -47,7 +47,7 @@ class ProductSeoProductTypeExtension extends AbstractTypeExtension
     */
     public static function getExtendedTypes(): iterable
     {
-      return [ProductType::class];
+        yield ProductType::class;
     }
 
 }
