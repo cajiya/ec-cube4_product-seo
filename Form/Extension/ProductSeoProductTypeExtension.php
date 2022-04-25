@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class ProductSeoProductTypeExtension extends AbstractTypeExtension
@@ -36,6 +37,22 @@ class ProductSeoProductTypeExtension extends AbstractTypeExtension
                     new Assert\Length(['max' => 320]),
                 ],
         ]);
+        
+        $builder
+            ->add('pseo_robots', ChoiceType::class, [
+                'label' => '[SEO]検索エンジンにインデックス',
+                'choices' => [
+                    'する(index,follow)' => "index,follow",
+                    'しない(noindex,nofollow)' => "noindex,nofollow",
+                ],
+                'eccube_form_options' => [
+                    'auto_render' => true,
+                ],
+                'constraints' => [
+                    new Assert\NotBlank(),
+                ],
+        ]);
+
     }
 
     public function getExtendedType()

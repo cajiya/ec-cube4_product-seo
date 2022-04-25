@@ -24,6 +24,13 @@ trait ProductSeoProductTrait
      */
     private $pseo_description;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pseo_robots", type="string", nullable=true , options={"default" : "index,follow"})
+     */
+    private $pseo_robots;
+
 
     /**
      * @return string
@@ -57,4 +64,19 @@ trait ProductSeoProductTrait
         $this->pseo_description = $pseo_description;
     }
 
+    /**
+     * @return boolean
+     */
+    public function getPseoRobots()
+    {
+        return $this->pseo_robots;
+    }
+
+    /**
+     * @param boolean $pseo_robots
+     */
+    public function setPseoRobots($pseo_robots)
+    {
+        $this->pseo_robots = $pseo_robots;
+    }
 }
