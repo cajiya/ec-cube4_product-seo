@@ -65,23 +65,36 @@ class ProductSeoListener implements EventSubscriberInterface
           $title = $Product->getPseoTitle();
           if( $title !== null ){
             $title = "<title>{$title}</title>";
-            preg_match('/\<title\>(.*?)\<\/title\>/', $content, $matches_title);
+            preg_match('/\<title\>(.*?)\<\/title\>/s', $content, $matches_title);
             if( $matches_title != false){
               $content = str_replace( $matches_title[0] , $title, $content);
             }else{
-              $content = str_replace( "</head>" , $title, $content);
+              $content = str_replace( "</head>" , $title."\r\n</head>" , $content);
             }
           }
 
           $description = $Product->getPseoDescription();
           if( $description !== null ){
             $description = "<meta name=\"description\" content=\"{$description}\" >";
-            preg_match('/\<meta name=\"description\" (.*?)\>/', $content, $matches_description);
+            preg_match('/\<meta name=\"description\" (.*?)\>/s', $content, $matches_description);
 
             if( $matches_description != false){
               $content = str_replace( $matches_description[0] , $description, $content);
             }else{
-              $content = str_replace( "</head>" , $description, $content);
+              $content = str_replace( "</head>" , $description."\r\n</head>", $content);
+            }
+          }
+
+
+          $robots = $Product->getPseoRobots();
+          if( $robots !== null ){
+            $robots = "<meta name=\"robots\" content=\"{$robots}\" >";
+            preg_match('/\<meta name=\"robots\" (.*?)\>/', $content, $matches_robots);
+
+            if( $matches_robots != false){
+              $content = str_replace( $matches_robots[0] , $robots, $content);
+            }else{
+              $content = str_replace( "</head>" , $robots."\r\n</head>", $content);
             }
           }
 
