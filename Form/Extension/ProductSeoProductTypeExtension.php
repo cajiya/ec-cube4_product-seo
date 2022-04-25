@@ -6,6 +6,7 @@ use Eccube\Form\Type\Admin\ProductType;
 use Symfony\Component\Form\AbstractTypeExtension;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Validator\Constraints as Assert;
 
 class ProductSeoProductTypeExtension extends AbstractTypeExtension
@@ -25,7 +26,7 @@ class ProductSeoProductTypeExtension extends AbstractTypeExtension
                 ],
         ]);
         $builder
-            ->add('pseo_description', TextType::class, [
+            ->add('pseo_description', TextareaType::class, [
                 'label' => '[SEO]ディスクリプション',
                 'required' => false,
                 'eccube_form_options' => [
