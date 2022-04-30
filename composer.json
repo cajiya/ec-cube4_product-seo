@@ -1,12 +1,12 @@
 {
   "name": "ec-cube/cjy-product-seo",
   "version": "1.0.0",
-  "description": "ProductSeo",
+  "description": "商品ページ毎にSEO（Title , Description , Robots）の設定が出来るシンプルなプラグインです。",
   "type": "eccube-plugin",
   "require": {
     "ec-cube/plugin-installer": "~0.0.6 || ^2.0"
   },
   "extra": {
-    "code": "ProductSeo"
+    "code": "cjy-product-seo"
   }
 }
