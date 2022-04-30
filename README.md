@@ -1,4 +1,4 @@
-# EC-CUBE4.x用 商品ページ個別SEO設定
+# EC-CUBE4.1用 商品ページ個別SEO設定
 
 商品ページ毎にSEO（Title , Description）設定をするシンプルなプラグインです。
 
