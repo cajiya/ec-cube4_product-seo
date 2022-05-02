@@ -1,12 +1,12 @@
 {
-  "name": "ec-cube/cjy-product-seo",
+  "name": "ec-cube/productmetaseoingenuity",
   "version": "1.0.0",
-  "description": "商品ページ毎にSEO（Title , Description , Robots）の設定が出来るシンプルなプラグインです。",
+  "description": "ProductMetaSeoIngenuity",
   "type": "eccube-plugin",
   "require": {
     "ec-cube/plugin-installer": "~0.0.6 || ^2.0"
   },
   "extra": {
-    "code": "CjyProductSeo"
+    "code": "ProductMetaSeoIngenuity"
   }
 }
