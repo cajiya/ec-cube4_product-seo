@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductSeo\EventListener;
+namespace Plugin\ProductMetaSeoIngenuity\EventListener;
 
 // use Eccube\Common\EccubeConfig;
 use Eccube\Request\Context;
@@ -11,7 +11,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 // use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 
-class ProductSeoListener implements EventSubscriberInterface
+class PmsiListener implements EventSubscriberInterface
 {
     /**
      * @var RequestStack

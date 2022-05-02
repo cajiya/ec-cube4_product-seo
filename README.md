@@ -16,9 +16,9 @@
 
 ```
 cd app/Plugin;
-git clone https://github.com/cajiya/ec-cube4_product-seo.git;
-mv ec-cube4_product-seo ProductSeo;
+git clone https://github.com/cajiya/ec-cube4_pmsi.git;
+mv ec-cube4_pmsi ProductMetaSeoIngenuity;
 cd ../../;
-php bin/console eccube:plugin:install --code="ProductSeo"
+php bin/console eccube:plugin:install --code="ProductMetaSeoIngenuity"
 ```
 

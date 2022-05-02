@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductSeo\Form\Extension;
+namespace Plugin\ProductMetaSeoIngenuity\Form\Extension;
 
 use Eccube\Form\Type\Admin\ProductType;
 use Symfony\Component\Form\AbstractTypeExtension;
@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Validator\Constraints as Assert;
 
-class ProductSeoProductTypeExtension extends AbstractTypeExtension
+class PmsiProductTypeExtension extends AbstractTypeExtension
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {

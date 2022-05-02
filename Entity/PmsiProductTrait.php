@@ -1,5 +1,5 @@
 <?php
-namespace Plugin\ProductSeo\Entity;
+namespace Plugin\ProductMetaSeoIngenuity\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation as Eccube;
@@ -7,7 +7,7 @@ use Eccube\Annotation as Eccube;
 /**
  * @Eccube\EntityExtension("Eccube\Entity\Product")
  */
-trait ProductSeoProductTrait
+trait PmsiProductTrait
 {
 
     /**
