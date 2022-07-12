@@ -1,5 +1,5 @@
 <?php
-namespace Plugin\ProductMetaSeoIngenuity\Entity;
+namespace Plugin\ProductMetaSeoIngenuity42\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation as Eccube;

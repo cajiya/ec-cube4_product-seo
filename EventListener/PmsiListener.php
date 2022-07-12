@@ -1,29 +1,19 @@
 <?php
 
-namespace Plugin\ProductMetaSeoIngenuity\EventListener;
+namespace Plugin\ProductMetaSeoIngenuity42\EventListener;
 
-// use Eccube\Common\EccubeConfig;
 use Eccube\Request\Context;
 use Eccube\Entity\Product;
 use Eccube\Repository\ProductRepository;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-// use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+use Symfony\Component\HttpKernel\Event\ResponseEvent;
+use Symfony\Component\HttpKernel\KernelEvents;
 
 class PmsiListener implements EventSubscriberInterface
 {
-    /**
-     * @var RequestStack
-     */
-    // protected $requestStack;
 
-    /**
-     * @var EccubeConfig
-     */
-    // protected $eccubeConfig;
-
-    /**
+  /**
      * @var Context
      */
     protected $requestContext;
@@ -35,19 +25,15 @@ class PmsiListener implements EventSubscriberInterface
 
 
     public function __construct(
-      // RequestStack $requestStack,
-      // EccubeConfig $eccubeConfig,
       Context $requestContext,
       ProductRepository $productRepository
       )
     {
-        // $this->requestStack = $requestStack;
-        // $this->eccubeConfig = $eccubeConfig;
         $this->requestContext = $requestContext;
         $this->productRepository = $productRepository;
     }
 
-    public function onKernelRequest(FilterResponseEvent $event)
+    public function onKernelResponse(ResponseEvent $event)
     {
         if (!$event->isMasterRequest()) {
             return;
@@ -106,7 +92,7 @@ class PmsiListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            'kernel.response' => ['onKernelRequest', 512],
+          KernelEvents::RESPONSE => ['onKernelResponse', 512],
         ];
     }
 

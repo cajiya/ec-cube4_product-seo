@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductMetaSeoIngenuity\Form\Extension;
+namespace Plugin\ProductMetaSeoIngenuity42\Form\Extension;
 
 use Eccube\Form\Type\Admin\ProductType;
 use Symfony\Component\Form\AbstractTypeExtension;
