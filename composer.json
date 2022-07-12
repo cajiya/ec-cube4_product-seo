@@ -1,6 +1,6 @@
 {
   "name": "ec-cube/productmetaseoingenuity42",
-  "version": "1.0.0",
+  "version": "4.2.0",
   "description": "商品ページ個別SEO設定",
   "type": "eccube-plugin",
   "require": {
