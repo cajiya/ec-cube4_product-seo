@@ -16,7 +16,7 @@
 
 ```
 cd app/Plugin;
-git clone https://github.com/cajiya/ec-cube4_pmsi.git;
+git clone -b 4.2 https://github.com/cajiya/ec-cube4_pmsi.git;
 mv ec-cube4_pmsi ProductMetaSeoIngenuity42;
 cd ../../;
 php bin/console eccube:plugin:install --code="ProductMetaSeoIngenuity42"
