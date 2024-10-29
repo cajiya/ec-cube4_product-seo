@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductMetaSeoIngenuity42\EventListener;
+namespace Plugin\ProductMetaSeoIngenuity43\EventListener;
 
 use Eccube\Request\Context;
 use Eccube\Entity\Product;
@@ -35,7 +35,7 @@ class PmsiListener implements EventSubscriberInterface
 
     public function onKernelResponse(ResponseEvent $event)
     {
-        if (!$event->isMasterRequest()) {
+        if (!$event->isMainRequest()) {
             return;
         }
         if ($this->requestContext->isFront()) {
@@ -89,7 +89,7 @@ class PmsiListener implements EventSubscriberInterface
       }
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
           KernelEvents::RESPONSE => ['onKernelResponse', 512],

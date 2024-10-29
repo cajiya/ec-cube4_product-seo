@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\ProductMetaSeoIngenuity42\Form\Extension;
+namespace Plugin\ProductMetaSeoIngenuity43\Form\Extension;
 
 use Eccube\Form\Type\Admin\ProductType;
 use Symfony\Component\Form\AbstractTypeExtension;
@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class PmsiProductTypeExtension extends AbstractTypeExtension
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options): void
     {
 
         $builder

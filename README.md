@@ -1,4 +1,4 @@
-# EC-CUBE4.2用 商品ページ個別SEO設定
+# EC-CUBE4.3用 商品ページ個別SEO設定
 
 商品ページ毎にSEO（Title , Description）設定をするシンプルなプラグインです。
 
@@ -15,10 +15,7 @@
 # インストール方法
 
 ```
-cd app/Plugin;
-git clone -b 4.2 https://github.com/cajiya/ec-cube4_pmsi.git;
-mv ec-cube4_pmsi ProductMetaSeoIngenuity42;
-cd ../../;
-php bin/console eccube:plugin:install --code="ProductMetaSeoIngenuity42"
+git clone https://github.com/cajiya/ec-cube4_pmsi.git app/Plugin/ProductMetaSeoIngenuity43;
+php bin/console eccube:plugin:install --code="ProductMetaSeoIngenuity43"
 ```
 
